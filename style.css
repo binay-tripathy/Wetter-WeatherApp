@@ -1,0 +1,40 @@
+html,
+body {
+    height: 100%;
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    background-color: #a5a5b1;
+    display: grid;
+    place-items: center;
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 50px;
+    color: #6f707d;
+}
+
+#heading {
+    font-size: 55px;
+    color: #2b304d;
+}
+
+.temp {
+    place-items: center;
+}
+
+.grey {
+    color: #a3acc1;
+    font-size: 12px;
+}
+
+.temperat{
+    display: flex;
+}
+
