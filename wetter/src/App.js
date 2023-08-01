@@ -3,7 +3,7 @@ import React from 'react';
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import Home from './pages/home';
 import Main from './pages/main';
-import backgif from './components/Snow.mp4';
+import backgif from './components/Snow_1.mp4';
 
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
     <>
       <div style={{ overflow: "hidden" }}>
         <section className="vh-100">
-          <video autoPlay muted loop id="myVideo" style={{ width: "100%", height: "auto", pointerEvents: "none" }}>
+          <video autoPlay muted preload='auto' loop id="myVideo" style={{ width: "100%", height: "auto", pointerEvents: "none" }}>
             <source src={backgif} type="video/mp4" />
           </video>
           <Router>
