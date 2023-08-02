@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React, { useEffect, useState } from 'react'
 import { useLocation } from 'react-router-dom'
 import fetch_api from '../components/fetch_api';
@@ -54,7 +55,7 @@ function Main() {
 
                     <div className="card mb-4 gradient-custom rounded">
                         <div className="card-body p-4">
-                            <div className="d-flex justify-content-between mb-1 px-3">
+                            <div className="d-flex justify-content-between mb-1 px-3" >
                                 <div>
                                     <h2 id='temperature' className="display-2" style={{ fontWeight: "400" }}>{temp + '\xB0' + 'C'}</h2>
 
@@ -81,36 +82,65 @@ function Main() {
                         </div>
                     </div>
 
-                    <div className="card mb-4 rounded">
+                    <div className="card mb-4 gradient-custom rounded">
                         <div className="card-body my-4">
                             <h5 className='text-center pb-4'>Hourly Forecast</h5>
                             <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="carousel">
-                                <div className="carousel-inner px-2">
+                                <div className="carousel-inner px-2" style={{fontWeight:"600"}}>
                                     <div className="carousel-item active">
                                         <div className="d-flex justify-content-around ">
                                             <div className="flex-column">
-                                                <p className="small"><strong>{fetdata.forecast.forecastday[0].hour[0].temp_c + '\xB0' + 'C'}</strong></p>
-                                                <p className="mb-0"><strong>00:00</strong></p>
+                                                <p className="small">{fetdata.forecast.forecastday[0].hour[0].temp_c + '\xB0' + 'C'}</p>
+                                                <p className="mb-0">00:00</p>
                                             </div>
                                             <div className="flex-column">
-                                                <p className="small"><strong>{fetdata.forecast.forecastday[0].hour[1].temp_c + '\xB0' + 'C'}</strong></p>
-                                                <p className="mb-0"><strong>01:00</strong></p>
+                                                <p className="small">{fetdata.forecast.forecastday[0].hour[1].temp_c + '\xB0' + 'C'}</p>
+                                                <p className="mb-0">01:00</p>
                                             </div>
                                             <div className="flex-column">
-                                                <p className="small"><strong>{fetdata.forecast.forecastday[0].hour[2].temp_c + '\xB0' + 'C'}</strong></p>
-                                                <p className="mb-0"><strong>02:00</strong></p>
+                                                <p className="small">{fetdata.forecast.forecastday[0].hour[2].temp_c + '\xB0' + 'C'}</p>
+                                                <p className="mb-0">02:00</p>
                                             </div>
                                             <div className="flex-column">
-                                                <p className="small"><strong>{fetdata.forecast.forecastday[0].hour[3].temp_c + '\xB0' + 'C'}</strong></p>
-                                                <p className="mb-0"><strong>03:00</strong></p>
+                                                <p className="small">{fetdata.forecast.forecastday[0].hour[3].temp_c + '\xB0' + 'C'}</p>
+                                                <p className="mb-0">03:00</p>
                                             </div>
                                             <div className="flex-column">
-                                                <p className="small"><strong>{fetdata.forecast.forecastday[0].hour[4].temp_c + '\xB0' + 'C'}</strong></p>
-                                                <p className="mb-0"><strong>04:00</strong></p>
+                                                <p className="small">{fetdata.forecast.forecastday[0].hour[4].temp_c + '\xB0' + 'C'}</p>
+                                                <p className="mb-0">04:00</p>
                                             </div>
                                             <div className="flex-column">
-                                                <p className="small"><strong>{fetdata.forecast.forecastday[0].hour[5].temp_c + '\xB0' + 'C'}</strong></p>
-                                                <p className="mb-0"><strong>05:00</strong></p>
+                                                <p className="small">{fetdata.forecast.forecastday[0].hour[5].temp_c + '\xB0' + 'C'}</p>
+                                                <p className="mb-0">05:00</p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div className="carousel-item ">
+                                        <div className="d-flex justify-content-around">
+                                            <div className="flex-column">
+                                                <p className="small">{fetdata.forecast.forecastday[0].hour[6].temp_c + '\xB0' + 'C'}</p>
+                                                <p className="mb-0">06:00</p>
+                                            </div>
+                                            <div className="flex-column">
+                                                <p className="small">{fetdata.forecast.forecastday[0].hour[7].temp_c + '\xB0' + 'C'}</p>
+                                                <p className="mb-0">07:00</p>
+                                            </div>
+                                            <div className="flex-column">
+                                                <p className="small">{fetdata.forecast.forecastday[0].hour[8].temp_c + '\xB0' + 'C'}</p>
+                                                <p className="mb-0">08:00</p>
+                                            </div>
+                                            <div className="flex-column">
+                                                <p className="small">{fetdata.forecast.forecastday[0].hour[9].temp_c + '\xB0' + 'C'}</p>
+                                                <p className="mb-0">09:00</p>
+                                            </div>
+                                            <div className="flex-column">
+                                                <p className="small">{fetdata.forecast.forecastday[0].hour[10].temp_c + '\xB0' + 'C'}</p>
+                                                <p className="mb-0">10:00</p>
+                                            </div>
+                                            <div className="flex-column">
+                                                <p className="small">{fetdata.forecast.forecastday[0].hour[11].temp_c + '\xB0' + 'C'}</p>
+                                                <p className="mb-0">11:00</p>
                                             </div>
 
                                         </div>
@@ -118,57 +148,28 @@ function Main() {
                                     <div className="carousel-item">
                                         <div className="d-flex justify-content-around">
                                             <div className="flex-column">
-                                                <p className="small"><strong>{fetdata.forecast.forecastday[0].hour[6].temp_c + '\xB0' + 'C'}</strong></p>
-                                                <p className="mb-0"><strong>06:00</strong></p>
+                                                <p className="small">{fetdata.forecast.forecastday[0].hour[12].temp_c + '\xB0' + 'C'}</p>
+                                                <p className="mb-0">12:00</p>
                                             </div>
                                             <div className="flex-column">
-                                                <p className="small"><strong>{fetdata.forecast.forecastday[0].hour[7].temp_c + '\xB0' + 'C'}</strong></p>
-                                                <p className="mb-0"><strong>07:00</strong></p>
+                                                <p className="small">{fetdata.forecast.forecastday[0].hour[13].temp_c + '\xB0' + 'C'}</p>
+                                                <p className="mb-0">13:00</p>
                                             </div>
                                             <div className="flex-column">
-                                                <p className="small"><strong>{fetdata.forecast.forecastday[0].hour[8].temp_c + '\xB0' + 'C'}</strong></p>
-                                                <p className="mb-0"><strong>08:00</strong></p>
+                                                <p className="small">{fetdata.forecast.forecastday[0].hour[14].temp_c + '\xB0' + 'C'}</p>
+                                                <p className="mb-0">14:00</p>
                                             </div>
                                             <div className="flex-column">
-                                                <p className="small"><strong>{fetdata.forecast.forecastday[0].hour[9].temp_c + '\xB0' + 'C'}</strong></p>
-                                                <p className="mb-0"><strong>09:00</strong></p>
+                                                <p className="small">{fetdata.forecast.forecastday[0].hour[15].temp_c + '\xB0' + 'C'}</p>
+                                                <p className="mb-0">15:00</p>
                                             </div>
                                             <div className="flex-column">
-                                                <p className="small"><strong>{fetdata.forecast.forecastday[0].hour[10].temp_c + '\xB0' + 'C'}</strong></p>
-                                                <p className="mb-0"><strong>10:00</strong></p>
+                                                <p className="small">{fetdata.forecast.forecastday[0].hour[16].temp_c + '\xB0' + 'C'}</p>
+                                                <p className="mb-0">16:00</p>
                                             </div>
                                             <div className="flex-column">
-                                                <p className="small"><strong>{fetdata.forecast.forecastday[0].hour[11].temp_c + '\xB0' + 'C'}</strong></p>
-                                                <p className="mb-0"><strong>11:00</strong></p>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                    <div className="carousel-item">
-                                        <div className="d-flex justify-content-around">
-                                            <div className="flex-column">
-                                                <p className="small"><strong>{fetdata.forecast.forecastday[0].hour[12].temp_c + '\xB0' + 'C'}</strong></p>
-                                                <p className="mb-0"><strong>12:00</strong></p>
-                                            </div>
-                                            <div className="flex-column">
-                                                <p className="small"><strong>{fetdata.forecast.forecastday[0].hour[13].temp_c + '\xB0' + 'C'}</strong></p>
-                                                <p className="mb-0"><strong>13:00</strong></p>
-                                            </div>
-                                            <div className="flex-column">
-                                                <p className="small"><strong>{fetdata.forecast.forecastday[0].hour[14].temp_c + '\xB0' + 'C'}</strong></p>
-                                                <p className="mb-0"><strong>14:00</strong></p>
-                                            </div>
-                                            <div className="flex-column">
-                                                <p className="small"><strong>{fetdata.forecast.forecastday[0].hour[15].temp_c + '\xB0' + 'C'}</strong></p>
-                                                <p className="mb-0"><strong>15:00</strong></p>
-                                            </div>
-                                            <div className="flex-column">
-                                                <p className="small"><strong>{fetdata.forecast.forecastday[0].hour[16].temp_c + '\xB0' + 'C'}</strong></p>
-                                                <p className="mb-0"><strong>16:00</strong></p>
-                                            </div>
-                                            <div className="flex-column">
-                                                <p className="small"><strong>{fetdata.forecast.forecastday[0].hour[17].temp_c + '\xB0' + 'C'}</strong></p>
-                                                <p className="mb-0"><strong>17:00</strong></p>
+                                                <p className="small">{fetdata.forecast.forecastday[0].hour[17].temp_c + '\xB0' + 'C'}</p>
+                                                <p className="mb-0">17:00</p>
                                             </div>
 
                                         </div>
@@ -176,28 +177,28 @@ function Main() {
                                     <div className="carousel-item">
                                         <div className="d-flex justify-content-around">
                                             <div className="flex-column">
-                                                <p className="small"><strong>{fetdata.forecast.forecastday[0].hour[18].temp_c + '\xB0' + 'C'}</strong></p>
-                                                <p className="mb-0"><strong>18:00</strong></p>
+                                                <p className="small">{fetdata.forecast.forecastday[0].hour[18].temp_c + '\xB0' + 'C'}</p>
+                                                <p className="mb-0">18:00</p>
                                             </div>
                                             <div className="flex-column">
-                                                <p className="small"><strong>{fetdata.forecast.forecastday[0].hour[19].temp_c + '\xB0' + 'C'}</strong></p>
-                                                <p className="mb-0"><strong>19:00</strong></p>
+                                                <p className="small">{fetdata.forecast.forecastday[0].hour[19].temp_c + '\xB0' + 'C'}</p>
+                                                <p className="mb-0">19:00</p>
                                             </div>
                                             <div className="flex-column">
-                                                <p className="small"><strong>{fetdata.forecast.forecastday[0].hour[20].temp_c + '\xB0' + 'C'}</strong></p>
-                                                <p className="mb-0"><strong>20:00</strong></p>
+                                                <p className="small">{fetdata.forecast.forecastday[0].hour[20].temp_c + '\xB0' + 'C'}</p>
+                                                <p className="mb-0">20:00</p>
                                             </div>
                                             <div className="flex-column">
-                                                <p className="small"><strong>{fetdata.forecast.forecastday[0].hour[21].temp_c + '\xB0' + 'C'}</strong></p>
-                                                <p className="mb-0"><strong>21:00</strong></p>
+                                                <p className="small">{fetdata.forecast.forecastday[0].hour[21].temp_c + '\xB0' + 'C'}</p>
+                                                <p className="mb-0">21:00</p>
                                             </div>
                                             <div className="flex-column">
-                                                <p className="small"><strong>{fetdata.forecast.forecastday[0].hour[22].temp_c + '\xB0' + 'C'}</strong></p>
-                                                <p className="mb-0"><strong>22:00</strong></p>
+                                                <p className="small">{fetdata.forecast.forecastday[0].hour[22].temp_c + '\xB0' + 'C'}</p>
+                                                <p className="mb-0">22:00</p>
                                             </div>
                                             <div className="flex-column">
-                                                <p className="small"><strong>{fetdata.forecast.forecastday[0].hour[23].temp_c + '\xB0' + 'C'}</strong></p>
-                                                <p className="mb-0"><strong>23:00</strong></p>
+                                                <p className="small">{fetdata.forecast.forecastday[0].hour[23].temp_c + '\xB0' + 'C'}</p>
+                                                <p className="mb-0">23:00</p>
                                             </div>
 
                                         </div>
@@ -218,7 +219,7 @@ function Main() {
                         </div>
                     </div>
 
-                    <div className="card rounded">
+                    <div className="card rounded gradient-custom ">
                         <div className="card-body p-4">
                             <div className="d-flex justify-content-between mb-1 px-3">
                                 <div>

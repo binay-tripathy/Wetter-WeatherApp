@@ -9,8 +9,13 @@ function Home() {
     const handleSearch = (event) => {
         setSearch(event.target.value);
     }
-    const handleClick = async (e) => {
-        e.preventDefault();
+    const handleEnter = (e) => {
+        if (e.key === 'Enter') {
+            e.preventDefault(); 
+            document.getElementById('search-addon').click();
+        }
+    }
+    const handleClick = async () => {
         let cityName = search;
         if (cityName === "") {
             document.getElementById('error').innerHTML = "** Please Enter a City Name";
@@ -43,7 +48,7 @@ function Home() {
                     <h3 className="mb-4 row justify-content-center pb-4 fw-normal">Check the weather forecast</h3>
 
                     <div className="input-group rounded position-static">
-                        <input type="search" className="form-control rounded mx-2" value={search} onChange={handleSearch} placeholder="City" />
+                        <input type="search" className="form-control rounded mx-2" value={search} onKeyPress={handleEnter} onChange={handleSearch} placeholder="City" />
                         <button className="btn btn-outline-success rounded" onClick={handleClick} type='submit' id="search-addon"> Check! </button>
 
                     </div>
