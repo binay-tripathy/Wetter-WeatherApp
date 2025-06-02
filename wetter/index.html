@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="Wetter" content="Weather app" />
+  <link rel="apple-touch-icon" href="/logo.png" />
+  <title>Wetter</title>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script>
+    if (typeof global === 'undefined') {
+      window.global = window;
+    }
+  </script>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+
+</html>
