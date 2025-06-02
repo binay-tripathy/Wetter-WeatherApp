@@ -19,6 +19,7 @@
     "dev": "vite --port 3000",
     "build": "vite build",
     "preview": "vite preview",
+    "start": "vite preview --host 0.0.0.0 --port $PORT",
     "audit": "npm audit",
     "audit-fix": "npm audit fix"
   },
