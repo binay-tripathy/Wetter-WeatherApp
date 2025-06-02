@@ -26,8 +26,9 @@ export default defineConfig({
     open: true
   },
   build: {
-    outDir: 'build',
+    outDir: 'dist',
     sourcemap: true
   },
+  publicDir: 'public',
   assetsInclude: ['**/*.png', '**/*.jpg', '**/*.jpeg', '**/*.gif', '**/*.svg']
 })
