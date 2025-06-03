@@ -2,8 +2,6 @@ const search = document.getElementById("search");
 const searchButton = document.getElementById("subbutton");
 let error = document.querySelector("#error");
 
-// https://weatherapi-com.p.rapidapi.com/current.json?rapidapi-key=7d0ceb0d4cmsh0de16948158e93cp10b602jsn70b39d682e0e&q=London
-
 const getData = async (e) => {
   e.preventDefault();
   let cityName = search.value;
@@ -14,7 +12,7 @@ const getData = async (e) => {
   else {
     try {
       //FETCHING WEATHER API
-      await fetch (`https://weatherapi-com.p.rapidapi.com/current.json?rapidapi-key=7d0ceb0d4cmsh0de16948158e93cp10b602jsn70b39d682e0e&q=${cityName}`)
+      await fetch (`https://weatherapi-com.p.rapidapi.com/current.json?rapidapi-key=<Your API KEY>&q=${cityName}`)
         .then((res) => {
           if(res.ok){
             return res.json()
@@ -80,11 +78,6 @@ function date() {
   let hours = d.getHours();
   let minutes = d.getMinutes();
   let seconds = d.getSeconds();
-  // function time(time){
-  //   if(time < 10){
-  //     time = "0" + time;
-  //   }
-  // }
   if(minutes < 10){
 		minutes = "0" + minutes;
 	}
